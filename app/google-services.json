@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "57037877461",
+    "project_id": "mob23quizappfirebase",
+    "storage_bucket": "mob23quizappfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57037877461:android:7242e07bd297f5504bb25c",
+        "android_client_info": {
+          "package_name": "com.jy.mob23quizappfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi-33DzrdW9tnQkK2sCFXdxBbFIctRWQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

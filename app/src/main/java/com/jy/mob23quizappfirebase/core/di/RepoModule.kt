@@ -1,18 +1,18 @@
 package com.jy.mob23quizappfirebase.core.di
 
-import android.content.Context
+import com.jy.mob23quizappfirebase.core.data.repo.UserRepo
 import com.jy.mob23quizappfirebase.core.services.AuthService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class AppModule {
+class RepoModule {
+
     @Provides
     @Singleton
-    fun provideAuthService(@ApplicationContext context: Context): AuthService = AuthService(context)
+    fun provideUserRepo(authService: AuthService): UserRepo = UserRepo(authService)
 }

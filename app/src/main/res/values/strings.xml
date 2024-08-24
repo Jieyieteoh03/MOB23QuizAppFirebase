@@ -1,5 +1,25 @@
 <resources>
-    <string name="app_name">MOB 2.3 QuizAppFirebase</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">QuizAppFirebase</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="email_hint">e.g john@gmail.com</string>
+    <string name="email_title">Email</string>
+    <string name="password_title">Password</string>
+    <string name="password_hint">e.g 1234567890</string>
+    <string name="login_button_text">Login</string>
+    <string name="welcome_text">Welcome to Quizzlo !</string>
+    <string name="sign_up_button_text">Sign Up</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name_hint">e.g John</string>
+    <string name="name_title">Name</string>
+    <string name="teacher_button_text">I\'m a Teacher</string>
+    <string name="student_button_text">I\'m a Student</string>
+    <string name="role_title">Role</string>
+    <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+    <string-array name="role_array">
+        <item>Student</item>
+        <item>Teacher</item>
+    </string-array>
 </resources>

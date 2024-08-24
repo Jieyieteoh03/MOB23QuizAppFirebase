@@ -3,11 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/startPageFragment">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="mob23quizappfirebase.ui.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/startPageFragment"
+        android:name="com.jy.mob23quizappfirebase.ui.startPage.StartPageFragment"
+        android:label="StartPageFragment"
+        tools:layout="@layout/fragment_startpage">
+        <action
+            android:id="@+id/action_startPage_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_startPage_to_signUp"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.jy.mob23quizappfirebase.ui.authentication.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment" />
+        <action
+            android:id="@+id/action_login_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.jy.mob23quizappfirebase.ui.authentication.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUp_to_studentDashboard"
+            app:destination="@id/studentDashboardFragment" />
+        <action
+            android:id="@+id/action_signUp_to_teacherDashboard"
+            app:destination="@id/teacherDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentDashboardFragment"
+        android:name="com.jy.mob23quizappfirebase.ui.dashboard.student.StudentDashboardFragment"
+        android:label="fragment_student_dashboard"
+        tools:layout="@layout/fragment_student_dashboard" />
+    <fragment
+        android:id="@+id/teacherDashboardFragment"
+        android:name="com.jy.mob23quizappfirebase.ui.dashboard.teacher.TeacherDashboardFragment"
+        android:label="fragment_teacher_dashboard"
+        tools:layout="@layout/fragment_teacher_dashboard" />
 </navigation>
