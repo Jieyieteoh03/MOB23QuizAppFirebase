@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.dashboard.teacher.TeacherDashboardFragment">
-
-    <TextView
+<layout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/teacher" />
+        android:layout_margin="@dimen/xs"
+        tools:context=".ui.dashboard.teacher.TeacherDashboardFragment">
 
-</FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvQuizList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/m"
+            android:paddingVertical="@dimen/xxs" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:layout_marginEnd="@dimen/xs"
+            android:layout_marginBottom="@dimen/xs"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@string/add_fab" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

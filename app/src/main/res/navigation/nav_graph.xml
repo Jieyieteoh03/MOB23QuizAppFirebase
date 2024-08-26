@@ -50,5 +50,6 @@
         android:id="@+id/teacherDashboardFragment"
         android:name="com.jy.mob23quizappfirebase.ui.dashboard.teacher.TeacherDashboardFragment"
         android:label="fragment_teacher_dashboard"
-        tools:layout="@layout/fragment_teacher_dashboard" />
+        tools:layout="@layout/fragment_teacher_dashboard" >
+    </fragment>
 </navigation>

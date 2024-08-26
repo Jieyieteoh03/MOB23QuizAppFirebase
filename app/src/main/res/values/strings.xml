@@ -18,8 +18,29 @@
     <string name="role_title">Role</string>
     <string name="teacher">Teacher</string>
     <string name="student">Student</string>
+    <string name="add_fab">add_fab</string>
+    <string name="add_title">Title</string>
+    <string name="add_title_input">Enter title</string>
+    <string name="add_description">Description</string>
+    <string name="add_description_input">Enter description</string>
+    <string name="btn_add_quiz">Add quiz</string>
+    <string name="add_quiz_title">Add quiz</string>
+    <string name="set_timer_title">Set timer</string>
+    <string name="import_csv_title">Import CSV</string>
+    <string name="card_title">Title</string>
+    <string name="card_desc">Description</string>
+    <string name="card_timer">Timer</string>
     <string-array name="role_array">
         <item>Student</item>
         <item>Teacher</item>
+    </string-array>
+    <string-array name="timer_array">
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
     </string-array>
 </resources>
