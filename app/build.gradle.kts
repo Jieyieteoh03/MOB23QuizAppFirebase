@@ -4,6 +4,7 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -38,7 +39,8 @@ android {
     }
 
     buildFeatures{
-        viewBinding = true
+        dataBinding = true
+        buildConfig = true
     }
 }
 
@@ -49,6 +51,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -58,8 +62,12 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.fragment.ktx)
 
+    // Injection Dependency
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+
+    //Splash Screen
+    implementation(libs.androidx.core.splashscreen)
 }
 
 kapt{

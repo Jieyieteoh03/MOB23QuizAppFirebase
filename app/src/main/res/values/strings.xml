@@ -1,5 +1,75 @@
 <resources>
-    <string name="app_name">MOB 2.3 QuizAppFirebase</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">QuizAppFirebase</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="email_hint">e.g john@gmail.com</string>
+    <string name="email_title">Email</string>
+    <string name="password_title">Password</string>
+    <string name="password_hint">e.g 1234567890</string>
+    <string name="login_button_text">Login</string>
+    <string name="welcome_text">Welcome to Quizzlo !</string>
+    <string name="sign_up_button_text">Sign Up</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name_hint">e.g John</string>
+    <string name="name_title">Name</string>
+    <string name="teacher_button_text">I\'m a Teacher</string>
+    <string name="student_button_text">I\'m a Student</string>
+    <string name="role_title">Role</string>
+    <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+    <string name="add_fab">add_fab</string>
+    <string name="add_title">Title</string>
+    <string name="add_title_input">Enter title</string>
+    <string name="add_description">Description</string>
+    <string name="add_description_input">Enter description</string>
+    <string name="btn_add_quiz">Add quiz</string>
+    <string name="add_quiz_title">Add quiz</string>
+    <string name="set_timer_title">Set timer</string>
+    <string name="import_csv_title">Import CSV</string>
+    <string name="card_title">Title</string>
+    <string name="card_desc">Description</string>
+    <string name="card_timer">Timer</string>
+    <string name="view_quiz_title">Quiz Title</string>
+    <string name="view_quiz_desc">Quiz desc</string>
+    <string name="view_quiz_timer">Quiz Timer</string>
+    <string name="view_question_title">Question Title</string>
+    <string name="ques_ans_1">Ans 1</string>
+    <string name="ques_ans_2">Ans 2</string>
+    <string name="ques_ans_3">Ans 3</string>
+    <string name="ques_ans_4">Ans 4</string>
+    <string name="ques_answer">Answer: Ans</string>
+    <string name="quiz_example_name">QUIZ EXAMPLE NAME</string>
+    <string name="time_left_10">Time Left: 10</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="menu_username">Username</string>
+    <string name="menu_user_email">User Email</string>
+    <string name="btn_logout">Logout</string>
+    <string name="delete_btn">delete_btn</string>
+    <string name="timer_display">%1$s seconds left</string>
+    <string name="end_quiz_button">End Quiz</string>
+    <string name="start_quiz_button">Start Quiz</string>
+    <string name="quiz_id_input">Please enter Quiz ID</string>
+    <string name="app_title">Quizzlo</string>
+    <string name="switch_views">Switch</string>
+    <string name="copy_id_button">Copy ID</string>
+    <string name="back_button">Back</string>
+    <string name="show_timetaken">TimeTaken</string>
+    <string name="show_score">Score</string>
+    <string name="results_title">Results</string>
+    <string name="score_text">Score: %1$d</string>
+    <string name="time_taken_text">Time taken: %1$d seconds</string>
+    <string-array name="role_array">
+        <item>Student</item>
+        <item>Teacher</item>
+    </string-array>
+    <string-array name="timer_array">
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+    </string-array>
 </resources>
