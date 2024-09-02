@@ -1,11 +1,11 @@
 package com.jy.mob23quizappfirebase.ui.base
 
 import androidx.lifecycle.ViewModel
-import com.jy.mob23quizappfirebase.core.data.model.Role
+import com.jy.mob23quizappfirebase.data.model.Role
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 
-abstract class BaseViewModel:ViewModel() {
+abstract class BaseViewModel: ViewModel() {
     protected val _error = MutableSharedFlow<String>()
     val error: SharedFlow<String> = _error
     protected val _finish = MutableSharedFlow<String>()

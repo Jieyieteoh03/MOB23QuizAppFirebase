@@ -1,29 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/xs"
+        android:orientation="vertical"
+        android:background="@color/light_purple"
         tools:context=".ui.dashboard.teacher.TeacherDashboardFragment">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvQuizList"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingHorizontal="@dimen/m"
-            android:paddingVertical="@dimen/xxs" />
+            android:orientation="vertical"
+            android:layout_margin="@dimen/xs">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_add"
-            android:layout_marginEnd="@dimen/xs"
-            android:layout_marginBottom="@dimen/xs"
-            android:layout_gravity="bottom|end"
-            android:contentDescription="@string/add_fab" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:layout_gravity="end"
+                app:icon="@drawable/ic_logout"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"/>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvQuizList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="@dimen/xxs" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add"
+                    android:layout_marginEnd="@dimen/xs"
+                    android:layout_marginBottom="@dimen/xs"
+                    android:layout_gravity="bottom|end"
+                    android:contentDescription="@string/add_fab" />
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </LinearLayout>
+    </LinearLayout>
 </layout>

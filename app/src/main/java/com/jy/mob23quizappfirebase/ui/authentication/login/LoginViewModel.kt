@@ -1,7 +1,7 @@
 package com.jy.mob23quizappfirebase.ui.authentication.login
 
 import androidx.lifecycle.viewModelScope
-import com.jy.mob23quizappfirebase.core.data.repo.UserRepo
+import com.jy.mob23quizappfirebase.data.repo.UserRepo
 import com.jy.mob23quizappfirebase.core.services.AuthService
 import com.jy.mob23quizappfirebase.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

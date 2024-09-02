@@ -62,8 +62,12 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.fragment.ktx)
 
+    // Injection Dependency
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+
+    //Splash Screen
+    implementation(libs.androidx.core.splashscreen)
 }
 
 kapt{

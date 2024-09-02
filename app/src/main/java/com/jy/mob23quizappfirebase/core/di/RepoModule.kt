@@ -1,6 +1,7 @@
 package com.jy.mob23quizappfirebase.core.di
 
-import com.jy.mob23quizappfirebase.core.data.repo.UserRepo
+import com.jy.mob23quizappfirebase.data.repo.QuizRepo
+import com.jy.mob23quizappfirebase.data.repo.UserRepo
 import com.jy.mob23quizappfirebase.core.services.AuthService
 import dagger.Module
 import dagger.Provides
@@ -14,5 +15,11 @@ class RepoModule {
 
     @Provides
     @Singleton
+    fun provideQuizRepo(authService: AuthService): QuizRepo = QuizRepo(authService)
+
+    @Provides
+    @Singleton
     fun provideUserRepo(authService: AuthService): UserRepo = UserRepo(authService)
+
+
 }

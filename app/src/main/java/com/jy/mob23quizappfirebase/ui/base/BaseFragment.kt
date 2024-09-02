@@ -12,7 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.snackbar.Snackbar
 import com.jy.mob23quizappfirebase.R
-import com.jy.mob23quizappfirebase.core.data.model.Role
+import com.jy.mob23quizappfirebase.data.model.Role
 import com.jy.mob23quizappfirebase.ui.authentication.login.LoginFragmentDirections
 import com.jy.mob23quizappfirebase.ui.authentication.signup.SignUpFragmentDirections
 import kotlinx.coroutines.launch
@@ -23,18 +23,13 @@ abstract class BaseFragment<T: ViewBinding> : Fragment() {
     protected abstract fun getLayoutResource(): Int
     protected var currentUserRole: Role? = null
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(getLayoutResource(), container, false)
-    }
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View = inflater.inflate(getLayoutResource(), container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        onBindData(view)
         onBindView(view)
+        onBindData(view)
     }
 
     protected open fun onBindView(view: View) {
@@ -45,12 +40,16 @@ abstract class BaseFragment<T: ViewBinding> : Fragment() {
         lifecycleScope.launch {
             viewModel.error.collect{
                 showSnackBar(view, it, true)
+                if(it.contains("Fail")) findNavController().popBackStack()
             }
         }
 
         lifecycleScope.launch {
             viewModel.finish.collect{
                 showSnackBar(view, it)
+                if(it.contains("Add") || it.contains("Edit")) {
+                    findNavController().popBackStack()
+                }
             }
         }
 
@@ -81,14 +80,11 @@ abstract class BaseFragment<T: ViewBinding> : Fragment() {
                         )
                     }
                 }
-                if(it.contains("Add")) {
-                    findNavController().popBackStack()
-                }
             }
         }
     }
 
-    protected fun showSnackBar(view: View, msg:String, isError:Boolean = false) {
+    private fun showSnackBar(view: View, msg:String, isError:Boolean = false) {
         val snackbar = Snackbar.make(view,msg,Snackbar.LENGTH_LONG)
         val color = if(isError) {
             R.color.red
@@ -100,5 +96,4 @@ abstract class BaseFragment<T: ViewBinding> : Fragment() {
         )
         snackbar.show()
     }
-
 }

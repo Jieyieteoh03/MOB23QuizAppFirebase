@@ -4,8 +4,8 @@ package com.jy.mob23quizappfirebase.ui.authentication.signup
 import android.view.View
 import androidx.fragment.app.viewModels
 import com.jy.mob23quizappfirebase.R
-import com.jy.mob23quizappfirebase.core.data.model.Role
-import com.jy.mob23quizappfirebase.core.data.model.User
+import com.jy.mob23quizappfirebase.data.model.Role
+import com.jy.mob23quizappfirebase.data.model.User
 import com.jy.mob23quizappfirebase.databinding.FragmentSignUpBinding
 import com.jy.mob23quizappfirebase.ui.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
