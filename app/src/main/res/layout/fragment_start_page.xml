@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/light_purple"
+        tools:context=".ui.startPage.StartPageFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_text"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:textSize="40sp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/m"
+            app:cornerRadius="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/login_button_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/m"
+            app:cornerRadius="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/sign_up_button_text"/>
+
+    </LinearLayout>
+</layout>
